@@ -43,8 +43,8 @@ public class StockValueMonitorThread extends Thread {
     @Override
     public void run() {
         while (!Thread.interrupted()) {
-            logger.info("Revisando cambios...");
-            checkStockValues();
+            //logger.info("Revisando cambios...");
+            checkActionCurrentPrice();
             try {
                 // Pausa del hilo
                 Thread.sleep(SLEEP_INTERVAL);
@@ -58,20 +58,20 @@ public class StockValueMonitorThread extends Thread {
     /**
      * Comprueba los valores de las acciones y notifica a los clientes si es necesario.
      */
-    private void checkStockValues() {
-        List<Action> currentStocks = actions.getActions();
-        List<Client> currentClients = clients.getClients();
+    private void checkActionCurrentPrice() {
+        List<Action> actionsStockExchange = actions.getActions();
+        List<Client> clientsRep = clients.getClients();
 
-        for (Client myClient : currentClients) {
+        for (Client myClient : clientsRep) {
             if (myClient.getActions() == null) {
                 continue;
             }
-            for (Action globalAction : currentStocks) {
+            for (Action globalAction : actionsStockExchange) {
                 Action clientAction = myClient.getActionById(globalAction.getActionId());
                 if (clientAction == null) {
                     continue;
                 }
-                if (isValueBeyondThresholds(clientAction, globalAction) && !clientAction.isNotified()) {
+                if (isOutOfThresholds(clientAction, globalAction) && !clientAction.isNotified()) {
                     String msg = String.format("Estimado(a) %s, el valor de la acción (%s) está fuera de los umbrales definidos.",
                             myClient.getClientName(), clientAction.getActionName());
                     if (notifier.sendMessage(myClient.getClientId(), msg)) {
@@ -89,7 +89,7 @@ public class StockValueMonitorThread extends Thread {
      * @param globalAction Acción en el mercado global.
      * @return true si el valor está fuera de los umbrales, false de lo contrario.
      */
-    private boolean isValueBeyondThresholds(Action clientAction, Action globalAction) {
+    private boolean isOutOfThresholds(Action clientAction, Action globalAction) {
         return globalAction.getCurrentPrice() < clientAction.getLowerThreshold() ||
                globalAction.getCurrentPrice() > clientAction.getUpperThreshold();
     }

@@ -1,6 +1,6 @@
 co\unicauca\financialagent\gui\FinancialAgentGUI.class
 co\unicauca\financialagent\FinancialAgent.class
-co\unicauca\financialagent\infra\IObserver.class
+co\unicauca\financialagent\pobserver\IObserver.class
 co\unicauca\financialagent\gui\FinancialAgentGUI$1.class
 co\unicauca\financialagent\subscripter\Listener.class
-co\unicauca\financialagent\infra\AbstractObservable.class
+co\unicauca\financialagent\pobserver\AbstractObservable.class

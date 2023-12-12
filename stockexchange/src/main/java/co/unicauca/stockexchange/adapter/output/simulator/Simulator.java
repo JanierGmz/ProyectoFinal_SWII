@@ -8,7 +8,7 @@ import co.unicauca.stockexchange.commons.domain.Action;
 import co.unicauca.stockexchange.commons.domain.Client;
 import co.unicauca.stockexchange.port.output.data.IClientRepository;
 import co.unicauca.stockexchange.port.output.data.IStockExchangeRepository;
-import co.unicauca.stockexchange.port.simulator.ISimulator;
+import co.unicauca.stockexchange.port.output.simulator.ISimulator;
 
 import java.util.List;
 import org.springframework.stereotype.Repository;

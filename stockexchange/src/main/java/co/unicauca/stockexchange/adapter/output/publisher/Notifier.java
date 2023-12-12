@@ -56,7 +56,7 @@ public class Notifier implements INotifier {
             channel.basicPublish(EXCHANGE_NAME, clientId, properties, msg.getBytes());
 
             // Imprime en la consola el mensaje que está siendo enviado
-            System.out.println("Enviando mensaje:" + msg);
+            //System.out.println("Enviando mensaje:" + msg);
             return true;
         } catch (IOException | TimeoutException ex) {
             // Maneja cualquier excepción que pueda ocurrir durante el envío del mensaje

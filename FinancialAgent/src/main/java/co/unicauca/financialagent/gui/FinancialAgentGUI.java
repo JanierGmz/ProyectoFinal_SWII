@@ -4,7 +4,7 @@
  */
 package co.unicauca.financialagent.gui;
 
-import co.unicauca.financialagent.infra.IObserver;
+import co.unicauca.financialagent.pobserver.IObserver;
 
 /**
  * FinancialAgentGUI es la interfaz gráfica de la aplicación.

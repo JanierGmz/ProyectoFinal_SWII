@@ -5,7 +5,7 @@
 package co.unicauca.stockexchange.adapter.controller;
 
 import co.unicauca.stockexchange.service.SimulatorService;
-import co.unicauca.stockexchange.port.simulator.ISimulator;
+import co.unicauca.stockexchange.port.output.simulator.ISimulator;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;

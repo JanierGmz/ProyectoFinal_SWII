@@ -5,7 +5,7 @@
 package co.unicauca.stockexchange.service;
 
 
-import co.unicauca.stockexchange.port.simulator.ISimulator;
+import co.unicauca.stockexchange.port.output.simulator.ISimulator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

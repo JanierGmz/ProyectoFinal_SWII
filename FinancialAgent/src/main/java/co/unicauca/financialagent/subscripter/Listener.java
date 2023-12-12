@@ -1,6 +1,6 @@
 package co.unicauca.financialagent.subscripter;
 
-import co.unicauca.financialagent.infra.AbstractObservable;
+import co.unicauca.financialagent.pobserver.AbstractObservable;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
@@ -31,6 +31,12 @@ public class Listener extends AbstractObservable {
 
     // Identificador del cliente al que se le notificarán los mensajes
     private final String clientId;
+    
+    //Nombre del archivo de configuracion
+    private final String nameConfigArchive;
+    
+    //Inicio del nombre de la cola.
+    private final String initialQueueName;
 
     // Constructor
     public Listener(String clientId) {
@@ -45,8 +51,14 @@ public class Listener extends AbstractObservable {
 
         // Configuración del identificador del cliente
         this.clientId = clientId.toUpperCase();
+        
+        //Configuracion del nombre del archivo
+        this.nameConfigArchive = "config.properties";
+        
+        //Configuracion del inicio de la cola.
+        this.initialQueueName = "queueClient_";
 
-        try (InputStream input = getClass().getClassLoader().getResourceAsStream("config.properties")) {
+        try (InputStream input = getClass().getClassLoader().getResourceAsStream(nameConfigArchive)) {
             // Cargar el archivo de propiedades
             properties.load(input);
 
@@ -75,7 +87,7 @@ public class Listener extends AbstractObservable {
         channel.exchangeDeclare(EXCHANGE_NAME, "direct", true);
 
         // Declarar una cola en el canal y obtener su nombre
-        String queueName = channel.queueDeclare("main_" + clientId, true, false, false, null).getQueue();
+        String queueName = channel.queueDeclare(initialQueueName + clientId, true, false, false, null).getQueue();
 
         // Vincular la cola al intercambio usando el identificador del cliente como clave de enrutamiento
         channel.queueBind(queueName, EXCHANGE_NAME, clientId);
