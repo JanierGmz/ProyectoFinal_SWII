@@ -24,6 +24,7 @@ Bienvenido al repositorio del Parcial Final de Ingeniería de Software II. Aquí
 - Java ☕
 - Spring Boot 🌐
 - RabbitMQ 📩
+- Docker 🐋
 
 ## Autores ✨
 
