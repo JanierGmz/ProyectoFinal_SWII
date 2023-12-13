@@ -61,9 +61,9 @@ public class ClientController implements IClientData {
             @PathVariable String phone
     ) {
         // Intenta agregar el cliente y devuelve el mensaje correspondiente
-        if (!clientService.addClient(clientId, clientName, phone)) {
-            return "Client not added successfully";
+        if (!clientService.addClient(clientId.toUpperCase(), clientName, phone)) {
+            return "Cliente no agregado exitosamente";
         }
-        return "Client successfully added";
+        return "Cliente agregado exitosamente";
     }
 }
