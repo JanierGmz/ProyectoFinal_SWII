@@ -1,5 +1,7 @@
-C:\Users\janie\OneDrive\Documentos\NetBeansProjects\FinancialAgent\src\main\java\co\unicauca\financialagent\pobserver\AbstractObservable.java
-C:\Users\janie\OneDrive\Documentos\NetBeansProjects\FinancialAgent\src\main\java\co\unicauca\financialagent\subscripter\Listener.java
-C:\Users\janie\OneDrive\Documentos\NetBeansProjects\FinancialAgent\src\main\java\co\unicauca\financialagent\FinancialAgent.java
-C:\Users\janie\OneDrive\Documentos\NetBeansProjects\FinancialAgent\src\main\java\co\unicauca\financialagent\pobserver\IObserver.java
-C:\Users\janie\OneDrive\Documentos\NetBeansProjects\FinancialAgent\src\main\java\co\unicauca\financialagent\gui\FinancialAgentGUI.java
+C:\Users\ledya\Videos\ProyectoFinal_SWII-main\FinancialAgent\src\main\java\co\unicauca\financialagent\infra\IObserver.java
+C:\Users\ledya\Videos\ProyectoFinal_SWII-main\FinancialAgent\src\main\java\co\unicauca\financialagent\infra\AbstractObservable.java
+C:\Users\ledya\Videos\ProyectoFinal_SWII-main\FinancialAgent\src\main\java\co\unicauca\financialagent\gui\FinancialAgentGUI.java
+C:\Users\ledya\Videos\ProyectoFinal_SWII-main\FinancialAgent\src\main\java\co\unicauca\financialagent\pobserver\AbstractObservable.java
+C:\Users\ledya\Videos\ProyectoFinal_SWII-main\FinancialAgent\src\main\java\co\unicauca\financialagent\FinancialAgent.java
+C:\Users\ledya\Videos\ProyectoFinal_SWII-main\FinancialAgent\src\main\java\co\unicauca\financialagent\subscripter\Listener.java
+C:\Users\ledya\Videos\ProyectoFinal_SWII-main\FinancialAgent\src\main\java\co\unicauca\financialagent\pobserver\IObserver.java
