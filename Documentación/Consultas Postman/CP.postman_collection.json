@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "cdfc9118-f794-4469-90d4-af891c6004d4",
+		"name": "CP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30924421"
+	},
+	"item": [
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "clients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/client",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "client",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/client/C01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"client",
+								"C01"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Portfolio",
+			"item": [
+				{
+					"name": "clientActions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/portfolio/actions/C01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"portfolio",
+								"actions",
+								"C01"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clientAction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/portfolio/action/C01/A01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"portfolio",
+								"action",
+								"C01",
+								"A01"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clientAction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/portfolio/addAction/C01/A01/80000/150000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"portfolio",
+								"addAction",
+								"C01",
+								"A01",
+								"80000",
+								"150000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clientAction",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/portfolio/updateAction/C01/A01/85000/155000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"portfolio",
+								"updateAction",
+								"C01",
+								"A01",
+								"85000",
+								"155000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clientAction",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/portfolio/deleteAction/C01/A01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"portfolio",
+								"deleteAction",
+								"C01",
+								"A01"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "StockExchange",
+			"item": [
+				{
+					"name": "globalActions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/stockExchange",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"stockExchange"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "globalAction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/stockExchange/A01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"stockExchange",
+								"A01"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
